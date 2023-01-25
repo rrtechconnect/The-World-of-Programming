@@ -1,5 +1,5 @@
 
-**Getting started with SQL**
+**1. Getting started with SQL**
 
 A Database is a collection of data and holds this data in the form of tables.
 what is a table- An entity that holds the data in the form of rows and columns. It is similar to excel spreadsheet.
@@ -59,3 +59,32 @@ These databases differ in terms of their features and functionality
     Age INT
     );
 
+**2. CRUD Operations**
+
+    CRUD
+    
+    Create --  insert statements
+    
+    Read -- select statements
+    
+    Update -- update statements
+    
+    Delete -- delete statements
+    
+    Creation of table and insert statements
+    
+    employee table
+    
+    CREATE TABLE employee (
+    firstname varchar(20),
+    middlename varchar(20),
+    lastname varchar(20),
+    age int,
+    salary int,
+    location varchar(20)
+    );
+    
+    Above one is the TTL statement
+    
+    
+    
