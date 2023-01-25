@@ -29,4 +29,33 @@ SQL holds good for all relational databases
 
 Learn Online at https://ide.goorm.io/
 
+Install goormIDE
+
+Create a container select nodejs stack
+
+start MySQL by typing the following command 
+
+mysql-ctl cli;
+
+Few basic SQL commands
+
+SHOW databases;
+
+CREATE DATABASE github
+
+USE github
+
+CREATE TABLE employee
+(
+name varchar(50)
+salary INT
+Age INT
+);
+
+CREATE TABLE employee.github
+(
+name varchar(50)
+salary INT
+Age INT
+);
 
