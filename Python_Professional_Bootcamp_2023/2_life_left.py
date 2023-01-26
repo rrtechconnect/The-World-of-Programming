@@ -9,3 +9,9 @@ tndLeft = tnd - (int(age)*365)
 tnwLeft = tnw - (int(age)* 52)
 tnmLeft = tnm - (int(age)* 12)
 print(f"You have {tndLeft} days, {tnwLeft} weeks, and {tnmLeft} months left.")
+
+# logic-II
+leftoutage = 90-int(age)
+tndLeft = leftoutage *365
+tnwLeft = leftoutage * 52
+tnmLeft = leftoutage * 12
