@@ -15,3 +15,4 @@ leftoutage = 90-int(age)
 tndLeft = leftoutage *365
 tnwLeft = leftoutage * 52
 tnmLeft = leftoutage * 12
+print(f"You have {tndLeft} days, {tnwLeft} weeks, and {tnmLeft} months left.")
