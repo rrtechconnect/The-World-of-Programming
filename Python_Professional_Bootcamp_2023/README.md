@@ -18,3 +18,19 @@ You have x days, y weeks, and z months left.
 Where x, y and z are replaced with the actual calculated numbers.
 
 Warning your output should match the Example Output format exactly, even the positions of the commas and full stops.
+
+***3. Write a program that interprets the Body Mass Index (BMI) based on a user's weight and height.***
+
+It should tell them the interpretation of their BMI based on the BMI value.
+
+Under 18.5 they are underweight
+
+Over 18.5 but below 25 they have a normal weight
+
+Over 25 but below 30 they are slightly overweight
+
+Over 30 but below 35 they are obese
+
+Above 35 they are clinically obese.
+
+![image](https://user-images.githubusercontent.com/117635899/215029710-f2071947-06eb-4169-befa-5a2a31a56a0c.png)
