@@ -65,3 +65,6 @@ But the year 2100 is not a leap year because:
 2100 ÷ 400 = 5.25 (Not Leap)
 
 Warning your output should match the Example Output format exactly, even the positions of the commas and full stops.
+
+![image](https://user-images.githubusercontent.com/117635899/215040792-f4196aa5-0188-4e1f-99ca-9e7f5c3553c4.png)
+
