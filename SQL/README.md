@@ -412,3 +412,6 @@ UNIQUE KEY(id, age)
         | NULL | rama      | bhama    |  34 |
         +------+-----------+----------+-----+
         3 rows in set (0.00 sec)
+        
+**4. Update, Delete, Alter, DDL vs DML, Truncate vs Delete**
+
