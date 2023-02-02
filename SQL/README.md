@@ -221,8 +221,8 @@ These databases differ in terms of their features and functionality
         
         But here two records created with same ID 1. This is not what we expected.
         
-    CREATE TABLE employee(id int **PRIMARY KEY**, firstname varchar(20) NOT NULL, middlename varchar(20),lastname varch
-    ar(20) NOT NULL, age int NOT NULL,Salary int NOT NULL,location varchar(20) NOT NULL DEFAULT 'Bangalore');
+    CREATE TABLE employee(id int PRIMARY KEY, firstname varchar(20) NOT NULL, middlename varchar(20),lastname varchar(20) NOT NULL, age int NOT NULL,Salary int NOT         NULL,location varchar(20) NOT NULL DEFAULT 'Bangalore');
+    
     Query OK, 0 rows affected (0.05 sec)
     
     mysql> desc employee;
@@ -240,19 +240,20 @@ These databases differ in terms of their features and functionality
     7 rows in set (0.00 sec)
     
     Now Notice the PRI under Key let;s insert the same employee in to the table table.
-    
-    mysql> INSERT INTO employee(id, firstname, lastname, age, salary) VALUES (1,'ramesh', 'sharma', 55, 4567);
-    Query OK, 1 row affected (0.01 sec)
 
-    mysql> INSERT INTO employee(id, firstname, lastname, age, salary) VALUES (1,'ramesh', 'sharma', 55, 4567);
-    **ERROR 1062 (23000): Duplicate entry '1' for key 'PRIMARY'**
-    
-    For a Primary key NULL  is not allowed also the repated entries are also not allowed
-    
-    mysql> INSERT INTO employee(id, firstname, lastname, age, salary) VALUES (NULL,'ramesh', 'sharma', 55, 4567);
-    **ERROR 1048 (23000): Column 'id' cannot be null**
-    
-    mysql> CREATE TABLE employee(id int AUTO_INCREMENT, firstname varchar(20) NOT NULL, middlename varchar(20),lastname varchar(20) NOT NULL, age int NOT NULL,Salary       int NOT NULL,location varchar(20) NOT NULL DEFAULT 'Bangalore', PRIMARY KEY(ID));
+        mysql> INSERT INTO employee(id, firstname, lastname, age, salary) VALUES (1,'ramesh', 'sharma', 55, 4567);
+        Query OK, 1 row affected (0.01 sec)
+
+        mysql> INSERT INTO employee(id, firstname, lastname, age, salary) VALUES (1,'ramesh', 'sharma', 55, 4567);
+        **ERROR 1062 (23000): Duplicate entry '1' for key 'PRIMARY'**
+
+        For a Primary key NULL  is not allowed also the repated entries are also not allowed
+
+        mysql> INSERT INTO employee(id, firstname, lastname, age, salary) VALUES (NULL,'ramesh', 'sharma', 55, 4567);
+        **ERROR 1048 (23000): Column 'id' cannot be null**
+
+        mysql> CREATE TABLE employee(id int AUTO_INCREMENT, firstname varchar(20) NOT NULL, middlename varchar(20),lastname varchar(20) NOT NULL, age int NOT                   NULL,Salary int NOT NULL,location varchar(20) NOT NULL DEFAULT 'Bangalore', PRIMARY KEY(ID));
+        
         Query OK, 0 rows affected (0.15 sec)
 
         mysql> desc employee;
@@ -294,39 +295,39 @@ These databases differ in terms of their features and functionality
         4 rows in set (0.00 sec)
 Remember 
 
-You can have only one primary key and the primary cannot be NULL. We should use primary key when we should uniquely identify each record.
+        You can have only one primary key and the primary cannot be NULL. We should use primary key when we should uniquely identify each record.
 
-Unique key can hold NULL, for example in MySQL a unique key can hold any number of values in some of the other well known DB's unique key hold only one NULL.
+        Unique key can hold NULL, for example in MySQL a unique key can hold any number of values in some of the other well known DB's unique key hold only one NULL.
 
-So, the purpose of Unique is to make sure that the values do not duplicate.
+        So, the purpose of Unique is to make sure that the values do not duplicate.
 
-We can have one primary key but multiple unique key in  a table.
+        We can have one primary key but multiple unique key in  a table.
 
-CREATE TABLE employee(
-firstname varchar(20) NOT NULL,
-lastname varchar(20) NOT NULL,
-age int NOT NULL,
-primary key(firstname, lastname)
-);
+        CREATE TABLE employee(
+        firstname varchar(20) NOT NULL,
+        lastname varchar(20) NOT NULL,
+        age int NOT NULL,
+        primary key(firstname, lastname)
+        );
 
-insert into employee values('kapil', 'rama',28);
-insert into employee values('kapil', 'sharma',28);
+        insert into employee values('kapil', 'rama',28);
+        insert into employee values('kapil', 'sharma',28);
 
-Try inserting same again it will not work. 
-mysql> insert into employee values('kapil', 'sharma',28);
-ERROR 1062 (23000): Duplicate entry 'kapil-sharma' for key 'PRIMARY'
-mysql> insert into employee values('kapil', 'rama',28);
-ERROR 1062 (23000): Duplicate entry 'kapil-rama' for key 'PRIMARY'
-mysql>
+        Try inserting same again it will not work. 
+        mysql> insert into employee values('kapil', 'sharma',28);
+        ERROR 1062 (23000): Duplicate entry 'kapil-sharma' for key 'PRIMARY'
+        mysql> insert into employee values('kapil', 'rama',28);
+        ERROR 1062 (23000): Duplicate entry 'kapil-rama' for key 'PRIMARY'
+        mysql>
 
-The composite primary works.
+        The composite primary works.
 
-CREATE TABLE employee(
-id int UNIQUE KEY,
-firstname varchar(20),
-lastname varchar(20),
-age int NOT NULL,
-);
+        CREATE TABLE employee(
+        id int UNIQUE KEY,
+        firstname varchar(20),
+        lastname varchar(20),
+        age int NOT NULL,
+        );
 
 
     mysql> desc employee;
